@@ -1,0 +1,17 @@
+html{
+    /* Это изображение отобразиться на всю страницу */
+    background: url(/img/fon2.jpg) no-repeat center center;
+
+    /* Принудительно указываем высоту равную 100% от высоты окна браузера */
+    min-height:100%;
+
+    /* Магия */
+    background-size:cover;
+}
+
+/*body {*/
+/*    background: url(/img/fon.jpeg) no-repeat center center;*/
+/*    min-height:100%;*/
+/*    background-size:cover;*/
+
+/*}*/
