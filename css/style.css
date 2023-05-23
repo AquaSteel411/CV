@@ -3,8 +3,8 @@ html {
     background: url(http://apesk.com/xinliceshi/admin1s/kindeditor/attached/image/20181223/20181223193546154615.jpg) no-repeat center center;
 
     /* Принудительно указываем высоту равную 100% от высоты окна браузера */
-    min-height:100%;
+    min-height: 100%;
 
     /* Магия */
-    background-size:cover;
+    background-size: cover;
 }
