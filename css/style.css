@@ -1,10 +1,98 @@
 html {
-    /* Это изображение отобразиться на всю страницу */
     background: url(../img/fon3.jpg) no-repeat center center;
+    min-height:100%;
+    background-size:cover;
 
-    /* Принудительно указываем высоту равную 100% от высоты окна браузера */
-    min-height: 100%;
+    font-family: Rubik, Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    letter-spacing: 0.7px;
+}
 
-    /* Магия */
-    background-size: cover;
+
+body {
+    margin: 0;
+}
+
+header {
+    padding: 0 30px 0 0;
+}
+
+.nav {
+    display: flex;
+    justify-content: flex-end;
+    color: white;
+}
+
+.nav a {
+    margin: 30px;
+    padding: 10px 15px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: white;
+    border-radius: 9px;
+    text-decoration: none;
+    transition: transform .2s;
+}
+
+.nav a:visited {
+    color: white;
+}
+
+.nav a:hover {
+    transform: scale(1.1)
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    margin-top: 70px;
+}
+
+.container-photo {
+    display: block;
+    background-color: azure;
+    width: 400px;
+    height: 550px;
+    margin-right: 10px;
+
+}
+
+.container-text {
+    display: flex;
+    box-sizing: border-box;
+    border-width: 2px;
+    border-style: solid;
+    border-color: white;
+    width: 600px;
+    height: 550px;
+}
+
+.photo {
+    width: 350px;
+    height: 370px;
+    margin: 25px;
+}
+
+.my-name {
+    text-align: center;
+    margin: 10px 0;
+    font-size: 24px;
+}
+
+.name {
+    font-family: Rubik, Helvetica, Arial, sans-serif;
+    font-weight: 500;
+}
+
+.my-prof {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 20px auto;
+    font-size: 20px;
+    width: 350px;
+    height: 50px;
+    background-color: lightgray;
 }
