@@ -32,6 +32,7 @@ header {
     border-color: white;
     border-radius: 9px;
     text-decoration: none;
+    color: white;
     transition: transform .2s;
 }
 
@@ -54,16 +55,12 @@ header {
     background-color: azure;
     width: 400px;
     height: 550px;
-    margin-right: 10px;
-
 }
 
 .container-text {
-    display: flex;
-    box-sizing: border-box;
-    border-width: 2px;
-    border-style: solid;
-    border-color: white;
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    position: relative;
     width: 600px;
     height: 550px;
 }
@@ -76,7 +73,7 @@ header {
 
 .my-name {
     text-align: center;
-    margin: 10px 0;
+    margin: 0;
     font-size: 24px;
 }
 
@@ -90,9 +87,63 @@ header {
     justify-content: center;
     align-items: center;
     text-align: center;
-    margin: 20px auto;
+    margin: 23px auto 25px;
     font-size: 20px;
     width: 350px;
     height: 50px;
     background-color: lightgray;
+}
+
+.hello {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 130px;
+    height: 80px;
+    color: azure;
+    background-color: #383838;
+
+    margin: 25px;
+}
+
+.for-me {
+    color: azure;
+    font-size: 20px;
+    line-height: 1.5;
+    margin: 25px;
+
+}
+
+.for-skills {
+    color: azure;
+    line-height: 1.5;
+    margin: 25px;
+}
+
+.btn-download {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    border-style: solid;
+    border-width: 2px;
+    border-color: azure;
+    color: azure;
+    position: absolute;
+    bottom: 0;
+    width: 300px;
+    height: 50px;
+    margin: 25px;
+}
+.svg {
+    transform: scale(0.3);
+    fill: azure;
+}
+
+.btn_icon {
+    width: 20px;
+    height: 20px;
+    font-size: 20px;
+    margin-right: 10px;
+    fill: azure;
 }
