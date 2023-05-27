@@ -1,30 +1,35 @@
-html {
-    background: url(../img/fon3.jpg) no-repeat center center;
-    min-height:100%;
-    background-size:cover;
-
-    font-family: Rubik, Helvetica, Arial, sans-serif;
-    font-size: 16px;
-    font-weight: 300;
-    letter-spacing: 0.7px;
+.page-1 {
+    /*background: url(../img/fon3.jpg) no-repeat center center;*/
+    /*min-height:100%;*/
+    /*background-size:cover;*/
+    height: 100vh;
+    /*background: linear-gradient(45deg, #424c67, #7e9ec4, #497a9a);*/
+    background: linear-gradient(45deg, #C8C8C8, #2d3d4a);
+    /*background: linear-gradient(45deg, #2d3d4a0f, #2d3d4a);*/
 }
 
 
 body {
+    font-family: Rubik, Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    letter-spacing: 0.7px;
     margin: 0;
 }
 
 header {
-    padding: 0 30px 0 0;
+
+
 }
 
 .nav {
+    padding: 0 30px 0 0;
     display: flex;
     justify-content: flex-end;
     color: white;
 }
 
-.nav a {
+.link {
     margin: 30px;
     padding: 10px 15px;
     border-width: 2px;
@@ -32,12 +37,15 @@ header {
     border-color: white;
     border-radius: 9px;
     text-decoration: none;
-    color: white;
-    transition: transform .2s;
+    color: azure;
+    /* При включенном transition на моем устройстве в Хроме наблюдается баг,
+       мерцает текст не относящийся к объектам класса link,
+       на других устройствах или в других браузерах такое не наблюдается */
+    /*transition: .2s;*/
 }
 
-.nav a:visited {
-    color: white;
+.link:visited {
+    color: azure;
 }
 
 .nav a:hover {
@@ -47,7 +55,8 @@ header {
 .main {
     display: flex;
     justify-content: center;
-    margin-top: 70px;
+    margin-top: 50px;
+    margin-left: 10%;
 }
 
 .container-photo {
@@ -63,6 +72,7 @@ header {
     position: relative;
     width: 600px;
     height: 550px;
+    transform: none;
 }
 
 .photo {
@@ -111,8 +121,9 @@ header {
     font-size: 20px;
     line-height: 1.5;
     margin: 25px;
-
+    white-space: pre-wrap;
 }
+
 
 .for-skills {
     color: azure;
@@ -135,10 +146,6 @@ header {
     height: 50px;
     margin: 25px;
 }
-.svg {
-    transform: scale(0.3);
-    fill: azure;
-}
 
 .btn_icon {
     width: 20px;
@@ -147,3 +154,98 @@ header {
     margin-right: 10px;
     fill: azure;
 }
+
+.page-2 {
+    /*display: flex;*/
+    /*justify-content: center;*/
+    /*align-items:center;*/
+    position: relative;
+    text-align: center;
+    background-color: #E0E0E0;
+    height: 100vh;
+    width: 100%;
+    padding: 40px 0 0 0;
+}
+
+.skills-icon {
+    fill: #0007;
+    width: 120px;
+    height: 120px;
+}
+
+.full-width {
+    width: 90vw;
+}
+
+.skills-list {
+    display: grid;
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-columns: 3fr 16fr 1fr;
+
+    transform: rotate(270deg);
+    text-align: left;
+    position: relative;
+
+    height: 70vh;
+    width: 45vw;
+    margin: 0 auto 0 auto;
+}
+
+.skills-list div {
+    display: flex;
+    align-items: center;
+}
+
+.skills-list p {
+    display: flex;
+    align-items: center;
+}
+
+.line {
+    position: absolute;
+    bottom: 16vh;
+    left: 5vw;
+}
+
+.container {
+    width: 100%;
+    background-color: #E0E0E0;
+}
+
+.skills {
+    text-align: right;
+    padding-top: 1px;
+    padding-bottom: 0;
+    color: black;
+}
+
+.proc {
+    transform: rotate(90deg);
+}
+
+.python {
+    width: 90%;
+    background-color: #000;
+}
+
+.html {
+    width: 80%;
+    background-color: #000;
+}
+
+.js {
+    width: 70%;
+    background-color: #000;
+    grid-template-columns: 3fr 14fr 1fr
+}
+
+.sport {
+    width: 80%;
+    background-color: #000;
+}
+
+.humor {
+    width: 80%;
+    background-color: #000;
+}
+
