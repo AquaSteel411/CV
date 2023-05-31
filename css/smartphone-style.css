@@ -1,87 +1,103 @@
 body {
     font-family: Rubik, Helvetica, Arial, sans-serif;
-    font-size: 16px;
+    font-size: 12px;
     font-weight: 300;
     letter-spacing: 0.7px;
     margin: 0;
 }
 
 .page-1 {
-    height: 100vh;
+    height: 530px;
     background: linear-gradient(45deg, #E0E0E0, #474A51);
 }
 
 .nav {
-    padding: 0 30px 0 0;
     display: flex;
     position: fixed;
-    justify-content: flex-end;
+    justify-content: space-between;
     width: 100%;
-    right: 0;
+    height: 50px;
+    padding: 0;
     color: white;
     background-color: #474A51;
     z-index: 1;
 }
 
 .link {
-    margin: 15px 30px;
-    padding: 8px 15px;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    margin: 10px 14px;
+    padding: 6px 6px;
     border-width: 2px;
     border-style: solid;
     border-color: white;
     border-radius: 9px;
     text-decoration: none;
     color: azure;
-    transition: .2s;
 }
 
-.home {
+.hidden {
+    visibility: hidden;
+    opacity: 0;
+    flex-direction: column;
+    background-color: #474A51;
     position: fixed;
-    left: 30px;
+    right: 0;
+    top: 0;
+}
+
+.hidden.open {
+    display: flex;
+    transition: .2s visibility linear, .2s opacity linear;
+    visibility: visible;
+    opacity: 1;
+}
+
+.collapsible {
+    background-color: #474A51;
+    color: azure;
+    cursor: pointer;
+    margin: 10px 15px;
+    padding: 5px 15px;
+    width: 50px;
+    border: none;
+    font-size: 15px;
 }
 
 .link:visited {
     color: azure;
 }
 
-.nav a:hover {
-    transform: scale(1.1)
-}
-
 .main {
-    display: flex;
+    display: grid;
     justify-content: center;
-    padding-top: 130px;
-    margin-left: 10%;
+    padding-top: 70px;
 }
 
 .container-photo {
     display: block;
     background-color: azure;
-    width: 400px;
-    height: 550px;
+    width: 160px;
+    height: 240px;
+    margin: 0;
 }
 
 .container-text {
-    display: grid;
-    grid-template-rows: repeat(4, 1fr);
-    position: relative;
-    width: 600px;
-    height: 550px;
-    transform: none;
-
+    width: 250px;
+    height: 200px;
 }
 
 .photo {
-    width: 350px;
-    height: 370px;
-    margin: 25px;
+    width: 140px;
+    height: 155px;
+    margin: 10px;
 }
 
 .my-name {
     text-align: center;
     margin: 0;
-    font-size: 24px;
+    font-size: 12px;
 }
 
 .name {
@@ -93,11 +109,10 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    text-align: center;
-    margin: 23px auto 25px;
-    font-size: 20px;
-    width: 350px;
-    height: 50px;
+    margin: 10px auto;
+    font-size: 11px;
+    width: 140px;
+    height: 28px;
     background-color: lightgray;
 }
 
@@ -105,49 +120,65 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 130px;
-    height: 80px;
+    position: absolute;
+    width: 70px;
+    height: 40px;
     color: azure;
     background-color: #383838;
-    margin: 25px;
+    margin: 10px;
+    top: 70px;
+    left: 175px;
 }
 
 .for-me {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 250px;
+    height: 50px;
     color: azure;
-    font-size: 20px;
-    line-height: 1.5;
-    margin: 25px;
+    background-color: #383838;
+    font-size: 10px;
+    line-height: 1.3;
+    margin: 9px 0 10px;
     white-space: pre-wrap;
 }
 
 
 .for-skills {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 250px;
+    height: 50px;
     color: azure;
-    line-height: 1.5;
-    margin: 25px;
+    background-color: #383838;
+    font-size: 10px;
+    line-height: 1.3;
+    margin: 10px 0 10px;
+    white-space: pre-wrap;
 }
 
 .social-media {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    justify-items: center;
     position: absolute;
-    height: 50px;
-    width: 250px;
-    margin: 15px;
-    left: 0;
-    bottom: 110px;
-}
-
-.social-media a {
-
-    height: 30px;
-    width: 30px;
+    height: 45px;
+    width: 170px;
+    margin: 0;
+    left: 133px;
+    top: 187px;
+    rotate: 90deg;
 }
 
 .social-media svg {
-    height: 30px;
-    width: 30px;
-    padding: 10px;
+    rotate: -90deg;
+    height: 15px;
+    width: 15px;
     fill: azure;
 }
 
@@ -158,13 +189,19 @@ body {
     box-sizing: border-box;
     border-style: solid;
     border-width: 2px;
-    border-color: azure;
-    color: azure;
-    position: absolute;
-    bottom: 0;
-    width: 300px;
-    height: 50px;
-    margin: 25px;
+    border-color: black;
+    color: black;
+    width: 210px;
+    height: 40px;
+    margin: 20px auto;
+}
+
+.btn_icon-white {
+    width: 20px;
+    height: 20px;
+    font-size: 20px;
+    margin-right: 10px;
+    fill: azure;
 }
 
 .btn_icon {
@@ -172,7 +209,7 @@ body {
     height: 20px;
     font-size: 20px;
     margin-right: 10px;
-    fill: azure;
+    fill: black;
 }
 
 .page-2 {
@@ -186,19 +223,19 @@ body {
 
 .icon-black {
     fill: #0007;
-    width: 120px;
-    height: 120px;
+    width: 40px;
+    height: 40px;
 }
 
 .icon-white {
     fill: #fff7;
-    width: 120px;
-    height: 120px;
+    width: 40px;
+    height: 40px;
 }
 
 .custom-h1 {
-    font-size: 28px;
-    margin: 15px 0;
+    font-size: 18px;
+    margin: 10px 0;
 }
 
 .full-width {
@@ -212,9 +249,9 @@ body {
     transform: rotate(270deg);
     text-align: left;
     position: relative;
-    height: 700px;
-    width: 500px;
-    margin: -70px auto 0 auto;
+    height: 230px;
+    width: 240px;
+    margin: 20px auto 0 auto;
 }
 
 .skills-list div {
@@ -225,6 +262,7 @@ body {
 .skills-list p {
     display: flex;
     align-items: center;
+    margin: 0 10px;
 }
 
 .line {
@@ -250,38 +288,43 @@ body {
 }
 
 .proc-python {
+    font-size: 8px;
     transform: rotate(90deg);
     position: absolute;
-    right: 25px;
-    top: 15px;
+    right: 15px;
+    top: 0px;
 }
 
 .proc-html {
+    font-size: 8px;
     transform: rotate(90deg);
     position: absolute;
-    right: 65px;
-    top: 155px;
+    right: 26px;
+    top: 44px;
 }
 
 .proc-js {
+    font-size: 8px;
     transform: rotate(90deg);
     position: absolute;
-    right: 110px;
-    top: 295px;
+    right: 47px;
+    top: 100px;
 }
 
 .proc-sport {
+    font-size: 8px;
     transform: rotate(90deg);
     position: absolute;
-    right: 65px;
-    top: 435px;
+    right: 26px;
+    top: 155px;
 }
 
 .proc-humor {
+    font-size: 8px;
     transform: rotate(90deg);
     position: absolute;
-    right: 65px;
-    top: 575px;
+    right: 26px;
+    top: 200px;
 }
 
 .python {
