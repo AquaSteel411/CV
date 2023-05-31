@@ -17,11 +17,18 @@ body {
     position: fixed;
     justify-content: flex-end;
     width: 100vw;
+    height: 69px;
     right: 0;
     color: white;
     background-color: #474A51;
     z-index: 1;
 }
+
+.collapsible {
+    /*display: none;*/
+}
+
+
 
 .link {
     margin: 15px 30px;
@@ -33,6 +40,13 @@ body {
     text-decoration: none;
     color: azure;
     transition: .2s;
+}
+
+.hidden {
+    display: flex;
+    background-color: #474A51;
+    position: fixed;
+    margin: 0;
 }
 
 .home {
@@ -371,7 +385,7 @@ body {
 }
 
 .about main {
-    
+
 }
 
 
