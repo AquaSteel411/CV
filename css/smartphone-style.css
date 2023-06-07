@@ -194,6 +194,8 @@ body {
     width: 210px;
     height: 40px;
     margin: 20px auto;
+    text-decoration: none;
+    fill: azure;
 }
 
 .btn_icon-white {
@@ -201,7 +203,6 @@ body {
     height: 20px;
     font-size: 20px;
     margin-right: 10px;
-    fill: azure;
 }
 
 .btn_icon {
