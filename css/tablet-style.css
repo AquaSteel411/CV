@@ -52,10 +52,6 @@ body {
     color: azure;
 }
 
-.nav a:hover {
-    transform: scale(1.1)
-}
-
 .main {
     display: flex;
     justify-content: center;
@@ -163,6 +159,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    text-align: center;
     box-sizing: border-box;
     border-style: solid;
     border-width: 2px;
@@ -173,6 +170,8 @@ body {
     width: 260px;
     height: 50px;
     margin: 0 0 16px 20px;
+    text-decoration: none;
+    fill: azure;
 }
 
 .btn_icon {
@@ -180,7 +179,6 @@ body {
     height: 20px;
     font-size: 20px;
     margin-right: 10px;
-    fill: azure;
 }
 
 .page-skills {
@@ -342,10 +340,10 @@ body {
     align-items: center;
     justify-items: center;
     position: relative;
-    height: 300px;
+    height: 250px;
     width: 600px;
     margin: 100px auto;
-    padding: 0px;
+    padding: 0;
 }
 
 .cont-photo-portfolio {
